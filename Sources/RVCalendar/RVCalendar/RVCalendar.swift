@@ -26,7 +26,7 @@ public class RVCalendar: UIView {
     //Calendar Month Changed
     var calendarNewMonthDate: Date?
     
-    var rvCalendarDelegate: RVCalendarDelegate?
+    public var rvCalendarDelegate: RVCalendarDelegate?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -164,13 +164,13 @@ public class RVCalendar: UIView {
         })
     }
     
-    func setDateSelectionBy(color: UIColor) {
+    public func setDateSelectionBy(color: UIColor) {
         calendarMonthView.setDateSelectorColor(colorName: color)
         calendarWeekView.setDateSelectionColor(colorName: color)
     }
     
     //To Setup Event Dots With Specific Colors
-    func addEventsOn(datesWithColors: [String: [UIColor]]) {
+    public func addEventsOn(datesWithColors: [String: [UIColor]]) {
         calendarWeekView.dictDateEventArrayColors = datesWithColors
         calendarMonthView.dictDateEventColors = datesWithColors
         calendarWeekView.reloadWeekView()
