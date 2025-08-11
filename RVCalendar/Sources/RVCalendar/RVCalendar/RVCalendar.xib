@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RVCalendar" customModule="RVCalendar" customModuleProvider="target">
+            <connections>
+                <outlet property="calendarMonthView" destination="9fg-Xz-lDG" id="Tic-zg-VRe"/>
+                <outlet property="calendarMonthViewHeightConstraint" destination="peP-pu-aQZ" id="UvA-VB-Eqs"/>
+                <outlet property="calendarWeekView" destination="1e1-3y-T6S" id="rZD-eA-Tm4"/>
+                <outlet property="calendarWeekViewHeightConstraint" destination="Pac-xV-5Lj" id="q3k-eF-9nG"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="P0U-i6-NSJ"/>
+                <outlet property="labelCalendarViewType" destination="jq8-Db-VXL" id="dbS-nH-uc7"/>
+                <outlet property="segmentButtonWeekMonth" destination="Vsw-Wa-MfU" id="oQP-Q3-XZH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="473"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fg-Xz-lDG" customClass="RVCalendarView" customModule="RVCalendar" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="40" width="393" height="433"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="433" id="peP-pu-aQZ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1e1-3y-T6S" customClass="CalendarWeekView" customModule="RVCalendar" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="40" width="393" height="200"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="Pac-xV-5Lj"/>
+                    </constraints>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vsw-Wa-MfU">
+                    <rect key="frame" x="272" y="0.0" width="101" height="32"/>
+                    <segments>
+                        <segment title="" image="CalendarListBlackIcon"/>
+                        <segment title="" image="CalendarMonthBlackIcon">
+                            <size key="contentOffset" width="-1" height="0.0"/>
+                        </segment>
+                    </segments>
+                    <connections>
+                        <action selector="buttonSegmentChanged:" destination="-1" eventType="valueChanged" id="mas-nL-xtS"/>
+                    </connections>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jq8-Db-VXL">
+                    <rect key="frame" x="20" y="5" width="49" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="9fg-Xz-lDG" firstAttribute="top" secondItem="Vsw-Wa-MfU" secondAttribute="bottom" constant="9" id="1gS-wb-Etb"/>
+                <constraint firstItem="1e1-3y-T6S" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="2LY-Jk-fdM"/>
+                <constraint firstItem="jq8-Db-VXL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Fh9-4z-23c"/>
+                <constraint firstItem="9fg-Xz-lDG" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="LtW-x9-akw"/>
+                <constraint firstAttribute="bottom" secondItem="9fg-Xz-lDG" secondAttribute="bottom" id="Rlx-Yr-THH"/>
+                <constraint firstItem="jq8-Db-VXL" firstAttribute="centerY" secondItem="Vsw-Wa-MfU" secondAttribute="centerY" id="T58-Yp-lcS"/>
+                <constraint firstItem="9fg-Xz-lDG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZDS-MR-VSE"/>
+                <constraint firstAttribute="trailing" secondItem="Vsw-Wa-MfU" secondAttribute="trailing" constant="20" id="h9K-4K-HwM"/>
+                <constraint firstItem="1e1-3y-T6S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="s3l-F2-0Sa"/>
+                <constraint firstItem="1e1-3y-T6S" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uUM-3I-cZy"/>
+                <constraint firstItem="9fg-Xz-lDG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="xJv-nn-Rz1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-8.3969465648854964" y="-24.295774647887324"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CalendarListBlackIcon" width="32" height="32"/>
+        <image name="CalendarMonthBlackIcon" width="32" height="32"/>
+    </resources>
+</document>
