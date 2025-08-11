@@ -19,7 +19,7 @@ class RVCalendarView: UIView {
     @IBOutlet weak var segmentButtonWeekMonth: UISegmentedControl!
     @IBOutlet weak var rvCalendarViewHeightConstraint: NSLayoutConstraint?
 
-    var monthViewCalendarDelegate: CalendarMonthViewDelegate?
+    public var monthViewCalendarDelegate: CalendarMonthViewDelegate?
     private var selectedDate = Date()
     private var totalDays = [String]()
     
@@ -66,13 +66,13 @@ class RVCalendarView: UIView {
         setupCalendarHeaders() 
     }
     
-    func reloadMonthViewCalendar() {
+    public func reloadMonthViewCalendar() {
         calendarView?.dateSelectionColor = colorForDateSelection
         calendarView?.dictArrayDateEventColors = dictDateEventColors
         calendarView?.reloadData()
     }
     
-    func reloadMonthViewFor(newSelectedDate: String) {
+    public func reloadMonthViewFor(newSelectedDate: String) {
         calendarView?.reloadMonthViewFor(selectedNewDate: newSelectedDate)
     }
     
@@ -96,7 +96,7 @@ class RVCalendarView: UIView {
             calendarView?.goToNextMonth()
     }
     
-    func setDateSelectorColor(colorName: UIColor) {
+    public func setDateSelectorColor(colorName: UIColor) {
         calendarView?.setDateSelectionColor(colorName: colorName)
         colorForDateSelection = colorName
     }

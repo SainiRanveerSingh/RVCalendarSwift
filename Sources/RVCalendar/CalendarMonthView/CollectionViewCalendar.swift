@@ -112,7 +112,7 @@ class CollectionViewCalendar:  UICollectionView {
         self.reloadData()
     }
     
-    func reloadCalendarFor(dateValue: Date) {
+    public func reloadCalendarFor(dateValue: Date) {
         selectedDate = dateValue
         setupMonthViewFor(date: selectedDate)
     }

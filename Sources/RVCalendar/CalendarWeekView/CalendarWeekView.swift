@@ -37,7 +37,7 @@ class CalendarWeekView: UIView {
     var indexPathForNewSelectedDateByUser: IndexPath?
     
     
-    var weekViewCalendarDelegate: CalendarWeekViewDelegate?
+    public var weekViewCalendarDelegate: CalendarWeekViewDelegate?
     
     //To Setup Event Dots With Specific Colors
     var dictDateEventArrayColors = [String: [UIColor]]()
@@ -81,7 +81,7 @@ class CalendarWeekView: UIView {
         setupCalendarHeaders()
     }
     
-    func calendarMonthChanged(newMonthDate: Date) {
+    public func calendarMonthChanged(newMonthDate: Date) {
         selectedMonthDate = newMonthDate
         selectedStartDate = CalendarHelper().startOfWeek(from: newMonthDate)
         setupWeekView()
@@ -93,7 +93,7 @@ class CalendarWeekView: UIView {
         labelCurrentWeekMonth?.text = monthLabelText
     }
     
-    func setDateSelectionColor(colorName: UIColor) {
+    public func setDateSelectionColor(colorName: UIColor) {
         dateSelectionColor = colorName
     }
     
@@ -256,7 +256,7 @@ class CalendarWeekView: UIView {
         return weeks
     }
     
-    func reloadWeekView() {
+    public func reloadWeekView() {
         let week = allWeeks[currentWeekIndex]
         weekDates = week
         
@@ -270,12 +270,12 @@ class CalendarWeekView: UIView {
         calendarWeekView?.reloadData()
     }
     
-    func reloadWeekViewFor(selectedNewDate: String) {
+    public func reloadWeekViewFor(selectedNewDate: String) {
         dateSelectedByUserOnCalendar = selectedNewDate
         calendarWeekView?.reloadData()
     }
     
-    func showWeekFor(selectedDate: Date) {        
+    public func showWeekFor(selectedDate: Date) {        
         goToWeekForSelected(date: selectedDate)
     }
     
