@@ -179,31 +179,31 @@ public class RVCalendar: UIView {
 
 //MARK: - Week View Delegate Method -
 extension RVCalendar: CalendarWeekViewDelegate {
-    func dateSelected(dateString: String) {
+    public func dateSelected(dateString: String) {
         print(dateString)
         rvCalendarDelegate?.selectedDate(stringValue: dateString)
         dateCurrentlySelectedOnCalendar = dateString
     }
     
-    func weekViewMonthChangedTo(newDate: Date) {
+    public func weekViewMonthChangedTo(newDate: Date) {
         calendarNewMonthDate = newDate
         //calendarMonthView.calendarView?.reloadCalendarFor(dateValue: newDate)
     }
 }
 
 extension RVCalendar: CalendarMonthViewDelegate {
-    func monthViewSelected(dateString: String) {
+    public func monthViewSelected(dateString: String) {
         print(dateString)
         rvCalendarDelegate?.selectedDate(stringValue: dateString)
         dateCurrentlySelectedOnCalendar = dateString
     }
     
-    func monthViewMonthChangedTo(newDate: Date) {
+    public func monthViewMonthChangedTo(newDate: Date) {
         calendarNewMonthDate = newDate
         //calendarWeekView.calendarMonthChanged(newMonthDate: newDate)
     }
     
-    func monthViewNewMonthCalendar(height: CGFloat) {
+    public func monthViewNewMonthCalendar(height: CGFloat) {
         //433 Full View Height
         //40 Space for Calendar Type Label And Segment Button
         //112 + 32 = 144 Space In Calendar View From Top And Bottom

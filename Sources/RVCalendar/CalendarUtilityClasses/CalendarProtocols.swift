@@ -9,7 +9,7 @@ import Foundation
 //MARK: - Protocol Methods For Calendar As Month View
 
 
-protocol CalendarCollectionDelegate {
+public protocol CalendarCollectionDelegate {
     @MainActor func currentMonth(nameText: String)
     @MainActor func nextMonth(nameText: String)
     @MainActor func previousMonth(nameText: String)
@@ -26,13 +26,13 @@ extension CalendarCollectionDelegate {
 }
 
 //MARK: - Protocol Methods For Calendar As Week View
-protocol CalendarWeekViewDelegate {
+public protocol CalendarWeekViewDelegate {
     @MainActor func dateSelected(dateString: String)
     @MainActor func weekViewMonthChangedTo(newDate: Date)
 }
 
 //MARK: - Protocol Methods For Calendar As Month View
-protocol CalendarMonthViewDelegate {
+public protocol CalendarMonthViewDelegate {
     @MainActor func monthViewSelected(dateString: String)
     @MainActor func monthViewMonthChangedTo(newDate: Date)
     @MainActor func monthViewNewMonthCalendar(height: CGFloat)
