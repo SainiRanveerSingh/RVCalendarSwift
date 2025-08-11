@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class RVCalendar: UIView {
+public class RVCalendar: UIView {
     @IBOutlet weak var contentView: UIView!
     
     @IBOutlet weak var segmentButtonWeekMonth: UISegmentedControl!
