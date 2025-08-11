@@ -42,7 +42,8 @@ class CollectionViewCalendar:  UICollectionView {
         self.delegate = self
         self.dataSource = self
         //Cell registration
-        let nib = UINib.init(nibName: "RVCalendarCollectionViewCell", bundle: nil)
+        let bundle = Bundle.module
+        let nib = UINib.init(nibName: "RVCalendarCollectionViewCell", bundle: bundle)
         self.register(nib, forCellWithReuseIdentifier: "RVCalendarCollectionViewCell")
         
         setupMonthView()

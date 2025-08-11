@@ -35,7 +35,12 @@ class RVCalendarView: UIView {
     }
     
     private func loadFromNib() {
+        /*
         Bundle.main.loadNibNamed("RVCalendarView", owner: self, options: nil)
+        */
+        let bundle = Bundle.module
+        let nib = UINib(nibName: "RVCalendarView", bundle: bundle)
+        nib.instantiate(withOwner: nil, options: nil).first as! RVCalendarView
         guard let contentView = contentView else {
             fatalError("contentView not connected")
         }
