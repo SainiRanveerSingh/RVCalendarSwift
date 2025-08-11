@@ -53,7 +53,7 @@ public class RVCalendar: UIView {
         
         calendarWeekView.isHidden = true
         
-        DispatchQueue.main.async { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
             guard let self = self else { return }
             calendarWeekView.weekViewCalendarDelegate = self
             calendarMonthView.monthViewCalendarDelegate = self
