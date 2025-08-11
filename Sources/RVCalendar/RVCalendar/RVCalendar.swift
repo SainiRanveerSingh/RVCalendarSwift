@@ -53,13 +53,13 @@ public class RVCalendar: UIView {
         
         calendarWeekView.isHidden = true
         
-        calendarWeekView.weekViewCalendarDelegate = self
-        calendarMonthView.monthViewCalendarDelegate = self
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.calendarMonthView.clipsToBounds = true
-            self.calendarMonthView.layer.cornerRadius = 15.0
+            calendarWeekView.weekViewCalendarDelegate = self
+            calendarMonthView.monthViewCalendarDelegate = self
         }
+        self.calendarMonthView.clipsToBounds = true
+        self.calendarMonthView.layer.cornerRadius = 15.0
         setupSegmentButton()
     }
     
