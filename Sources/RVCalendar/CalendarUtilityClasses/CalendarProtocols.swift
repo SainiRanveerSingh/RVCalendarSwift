@@ -46,7 +46,7 @@ extension CalendarMonthViewDelegate {
 }
 
 
-protocol RVCalendarDelegate {
+public protocol RVCalendarDelegate {
     func updateHeightTo(newHeight: CGFloat)
     func selectedDate(stringValue: String)
 }

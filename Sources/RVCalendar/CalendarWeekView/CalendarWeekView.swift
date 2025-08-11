@@ -57,8 +57,8 @@ class CalendarWeekView: UIView {
         Bundle.main.loadNibNamed("CalendarWeekView", owner: self, options: nil)
         */
         let bundle = Bundle.module
-        let nib = UINib(nibName: "CalendarWeekView", bundle: bundle)
-        nib.instantiate(withOwner: nil, options: nil).first as! CalendarWeekView
+        bundle.loadNibNamed("CalendarWeekView", owner: self, options: nil)
+        
         guard let contentView = weekContentView else {
             fatalError("contentView not connected")
         }

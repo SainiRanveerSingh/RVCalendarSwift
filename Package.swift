@@ -19,7 +19,12 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "RVCalendar",
-            resources: [.process("Resources")]),
-
+            resources: [.process("Resources"),
+                        .process("CalendarWeekView.xib"),
+                        .process("RVCalendar.xib"),
+                        .process("RVCalendarCollectionViewCell.xib"),
+                        .process("RVCalendarView.xib")
+            ]
+        ),
     ]
 )
