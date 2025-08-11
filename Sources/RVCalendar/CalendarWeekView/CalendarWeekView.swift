@@ -427,8 +427,7 @@ extension CalendarWeekView: UICollectionViewDelegate, UICollectionViewDataSource
         }
         
         return ""
-    }
-    
+    }    
 }
 
 
