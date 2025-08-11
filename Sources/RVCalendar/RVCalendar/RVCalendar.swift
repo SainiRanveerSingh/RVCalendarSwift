@@ -55,8 +55,12 @@ public class RVCalendar: UIView {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
             guard let self = self else { return }
-            calendarWeekView.weekViewCalendarDelegate = self
-            calendarMonthView.monthViewCalendarDelegate = self
+            if self.calendarWeekView != nil {
+                self.calendarWeekView.weekViewCalendarDelegate = self
+            }
+            if self.calendarMonthView != nil {
+                self.calendarMonthView.monthViewCalendarDelegate = self
+            }
         }
         self.calendarMonthView.clipsToBounds = true
         self.calendarMonthView.layer.cornerRadius = 15.0
