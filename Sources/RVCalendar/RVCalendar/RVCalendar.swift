@@ -72,7 +72,7 @@ public class RVCalendar: UIView {
         segmentButtonWeekMonth.setImage(UIImage(named: "CalendarListBlackIcon"), forSegmentAt: 0)
         segmentButtonWeekMonth.setImage(UIImage(named: "CalendarMonthBlackIcon"), forSegmentAt: 1)
         //UISegmentedControl(items: items)
-        segmentButtonWeekMonth.selectedSegmentIndex = 0
+        segmentButtonWeekMonth.selectedSegmentIndex = 1
         
         // Tint color (selected segment background) — Light Purple
         if #available(iOS 13.0, *) {
